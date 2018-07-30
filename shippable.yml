@@ -5,6 +5,7 @@ sudo: required
 build:
  ci:
   - chmod +x i3-gaps-deb
+  - export TERM=VT100
   - ./i3-gaps-deb
 
 runtime:
