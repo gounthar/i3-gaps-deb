@@ -1,0 +1,8 @@
+language: none
+
+sudo: required
+
+build:
+ ci:
+  - chmod +x i3-gaps-deb
+  - ./i3-gaps-deb
