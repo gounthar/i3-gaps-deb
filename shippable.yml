@@ -4,7 +4,7 @@ sudo: required
 
 build:
  ci:
-  - apt-get install -y build-essential fakeroot devscripts
+  - apt-get install -y build-essential fakeroot devscripts libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev
   - curl -L -O http://http.debian.net/debian/pool/main/x/xcb-util-xrm/xcb-util-xrm_1.0.orig.tar.bz2
   - file xcb-util-xrm_1.0.orig.tar.bz2 && bunzip2 xcb-util-xrm_1.0.orig.tar.bz2
   - tar -xvf xcb-util-xrm_1.0.orig.tar && rm xcb-util-xrm_1.0.orig.tar
@@ -20,7 +20,6 @@ build:
   - autoreconf --force --install
   - rm -rf build/
   - mkdir -p build && cd build/
-  - apt-get install -y libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm0 libxcb-xrm-dev
   - ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
   - ./i3-gaps-deb
 
