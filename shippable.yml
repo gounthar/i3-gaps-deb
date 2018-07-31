@@ -8,10 +8,9 @@ build:
   - curl -L -O http://http.debian.net/debian/pool/main/x/xcb-util-xrm/xcb-util-xrm_1.0.orig.tar.bz2
   - file xcb-util-xrm_1.0.orig.tar.bz2 && bunzip2 xcb-util-xrm_1.0.orig.tar.bz2
   - tar -xvf xcb-util-xrm_1.0.orig.tar && rm xcb-util-xrm_1.0.orig.tar
+  - cd xcb-util-xrm-1.0
   - curl -L -O http://http.debian.net/debian/pool/main/x/xcb-util-xrm/xcb-util-xrm_1.0-2.debian.tar.xz
   - tar -xvJf xcb-util-xrm_1.0-2.debian.tar.xz
-  - cat /etc/apt/sources.list | grep deb-src. 
-  - cd xcb-util-xrm-1.0
   - ./configure && make && make install
   - cd -
   - export TERM=linux
