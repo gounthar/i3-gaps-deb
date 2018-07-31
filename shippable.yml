@@ -12,6 +12,7 @@ build:
   - curl -L -O http://http.debian.net/debian/pool/main/x/xcb-util-xrm/xcb-util-xrm_1.0-2.debian.tar.xz
   - tar -xvJf xcb-util-xrm_1.0-2.debian.tar.xz
   - ./configure && make && make install
+  - debuild -b -uc -us
   - cd -
   - export TERM=linux
   - git clone https://www.github.com/Airblader/i3 i3-gaps
