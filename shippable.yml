@@ -22,7 +22,8 @@ build:
   - rm -rf build/
   - mkdir -p build && cd build/
   - ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
-  - ./i3-gaps-deb
+  - make && make install
+  - cd && ./i3-gaps-deb
 
 runtime:
   nodePool: shippable_shared_aarch64
