@@ -33,7 +33,7 @@ build:
 #  - debuild -b -uc -us
 # Package, anyone?  
   - which i3
-  - pwd && cd ../../ && pwd && chmod +x i3-gaps-deb && yes|./i3-gaps-deb
+  - apt update && chmod +x i3-gaps-deb && yes|./i3-gaps-deb
 
 runtime:
   nodePool: shippable_shared_aarch64
