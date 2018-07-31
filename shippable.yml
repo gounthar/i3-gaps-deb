@@ -5,7 +5,7 @@ sudo: required
 build:
  ci:
  # dependencies to be able to build
-  - apt-get update && apt-get install -y build-essential fakeroot devscripts i3 libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev dh-autoreconf libx11-xcb-dev xutils-dev
+  - apt-get update && apt-get upgrade && apt-get install -y build-essential fakeroot devscripts i3 libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev libxcb-xinerama0-dev libxkbcommon-x11-dev libstartup-notification0-dev libxcb-randr0-dev dh-autoreconf libx11-xcb-dev xutils-dev
  # xcb is not available as a package for aarch64, let's download and build its debian package
   - curl -L -O http://http.debian.net/debian/pool/main/x/xcb-util-xrm/xcb-util-xrm_1.0.orig.tar.bz2
   - bunzip2 xcb-util-xrm_1.0.orig.tar.bz2
@@ -33,7 +33,7 @@ build:
 #  - debuild -b -uc -us
 # Package, anyone?  
   - which i3
-  - apt update && chmod +x i3-gaps-deb && yes|./i3-gaps-deb
+  - cd ~/i3-gaps-deb && chmod +x i3-gaps-deb && yes|./i3-gaps-deb
 
 runtime:
   nodePool: shippable_shared_aarch64
