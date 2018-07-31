@@ -14,7 +14,6 @@ build:
   - cd xcb-util-xrm-1.0
   - ./configure && make && make install
   - cd -
-  - chmod +x i3-gaps-deb
   - export TERM=linux
   - git clone https://www.github.com/Airblader/i3 i3-gaps
   - cd i3-gaps
@@ -23,7 +22,7 @@ build:
   - mkdir -p build && cd build/
   - ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
   - make && make install
-  - cd && ./i3-gaps-deb
+  - cd && chmod +x i3-gaps-deb && ./i3-gaps-deb
 
 runtime:
   nodePool: shippable_shared_aarch64
