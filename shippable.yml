@@ -5,10 +5,10 @@ sudo: required
 build:
  ci:
   - apt-get install -y build-essential fakeroot devscripts
-  - curl -o http://http.debian.net/debian/pool/main/x/xcb-util-xrm/xcb-util-xrm_1.0.orig.tar.bz2
+  - curl -O http://http.debian.net/debian/pool/main/x/xcb-util-xrm/xcb-util-xrm_1.0.orig.tar.bz2
   - bunzip2 xcb-util-xrm_1.0.orig.tar.bz2 && rm xcb-util-xrm_1.0.orig.tar.bz2
   - tar -xvf xcb-util-xrm_1.0.orig.tar && rm xcb-util-xrm_1.0.orig.tar
-  - curl -o http://http.debian.net/debian/pool/main/x/xcb-util-xrm/xcb-util-xrm_1.0-2.debian.tar.xz
+  - curl -O http://http.debian.net/debian/pool/main/x/xcb-util-xrm/xcb-util-xrm_1.0-2.debian.tar.xz
   - unzip xcb-util-xrm_1.0-2.debian.tar.xz
   - cd xcb-util-xrm
   - ./configure && make && make install
