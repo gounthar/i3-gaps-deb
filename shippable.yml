@@ -11,7 +11,7 @@ build:
   - curl -L -O http://http.debian.net/debian/pool/main/x/xcb-util-xrm/xcb-util-xrm_1.0-2.debian.tar.xz
   - tar -xvJf xcb-util-xrm_1.0-2.debian.tar.xz
   - ls -artl
-  - cd xcb-util-xrm
+  - cd xcb-util-xrm-1.0
   - ./configure && make && make install
   - cd -
   - chmod +x i3-gaps-deb
