@@ -32,6 +32,7 @@ build:
   - make && make install
 #  - debuild -b -uc -us
 # Package, anyone?  
+  - which i3
   - pwd && cd ../../ && pwd && chmod +x i3-gaps-deb && yes|./i3-gaps-deb
 
 runtime:
