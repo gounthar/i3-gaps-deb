@@ -310,7 +310,7 @@ igd_handleJessieDependencySpecialCase()
 igd_cleanUp()
 {
 	if igd_question "Remove created files?" "y"; then
-		rm -v *${igd_TIMESTAMP}*
+		echo rm -v *${igd_TIMESTAMP}*
 	fi
 }
 
