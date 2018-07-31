@@ -13,6 +13,7 @@ build:
   - tar -xvJf xcb-util-xrm_1.0-2.debian.tar.xz
   - ./configure && make && make install
   - debuild -b -uc -us
+  - dpkg -i ../libxcb-xrm-dev_1.0-2_arm64.deb ../libxcb-xrm0_1.0-2_arm64.deb
   - cd -
   - export TERM=linux
   - git clone https://www.github.com/Airblader/i3 i3-gaps
