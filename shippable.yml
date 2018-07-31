@@ -4,6 +4,10 @@ sudo: required
 
 build:
  ci:
+  - git clone https://anonscm.debian.org/git/collab-maint/xcb-util-xrm.git
+  - cd xcb-util-xrm
+  - ./configure && make && make install
+  - cd -
   - chmod +x i3-gaps-deb
   - export TERM=linux
   - git clone https://www.github.com/Airblader/i3 i3-gaps
