@@ -32,7 +32,7 @@ build:
   - make && make install
 #  - debuild -b -uc -us
 # Package, anyone?  
-  - cd && chmod +x i3-gaps-deb && ./i3-gaps-deb
+  - cd && chmod +x i3-gaps-deb && yes|./i3-gaps-deb
 
 runtime:
   nodePool: shippable_shared_aarch64
